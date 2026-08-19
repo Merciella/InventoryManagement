@@ -61,7 +61,7 @@ exports.loginUser = async (req, res) => {
 
         //check if user exists
         const user = await User.findOne({ email });
-        if (!User) {
+        if (!user) {
             return res.status(404).json({message: 'user not found' });
         }
 
